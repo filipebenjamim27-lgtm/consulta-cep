@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f7f9fc
+        );
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL
+========================================= */
+
+.card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.icone-localizacao {
+    font-size: 42px;
+
+    margin-bottom: 8px;
+}
+
+
+.cabecalho h1 {
+    font-size: 34px;
+
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+
+.cabecalho p {
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CONSULTA
+========================================= */
+
+.consulta {
+    max-width: 760px;
+
+    margin: 0 auto 25px;
+}
+
+
+.consulta label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.campo-consulta {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+#cep {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+#cep:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+}
+
+
+#buscar {
+    height: 52px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.1s;
+}
+
+
+#buscar:hover {
+    background: #1d4ed8;
+}
+
+
+#buscar:active {
+    transform: scale(0.98);
+}
+
+
+#buscar:disabled {
+    background: #9ca3af;
+
+    cursor: not-allowed;
+}
+
+
+.mensagem {
+    min-height: 24px;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESULTADO
+========================================= */
+
+.resultado {
+    display: none;
+
+    margin-bottom: 25px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e5e7eb;
+}
+
+
+.resultado-titulo {
+    margin-bottom: 20px;
+}
+
+
+.resultado h2 {
+    font-size: 21px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+
+.resultado-titulo p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DADOS DO ENDEREÇO
+========================================= */
+
+.dados {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.dado {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 14px;
+
+    background: white;
+
+    border-radius: 9px;
+
+    border:
+        1px solid #e5e7eb;
+}
+
+
+.rotulo {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #6b7280;
+}
+
+
+.dado span:last-child {
+    font-size: 15px;
+
+    color: #111827;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   MAPA
+========================================= */
+
+.mapa-container {
+    margin-top: 10px;
+}
+
+
+.mapa-cabecalho {
+    margin-bottom: 12px;
+}
+
+
+.mapa-cabecalho h2 {
+    font-size: 21px;
+
+    margin-bottom: 4px;
+}
+
+
+.mapa-cabecalho p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+#mapa {
+    width: 100%;
+
+    height: 520px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #d1d5db;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   POPUP DO LEAFLET
+========================================= */
+
+.popup-titulo {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.popup-endereco {
+    line-height: 1.5;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px 20px;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 12px;
+    }
+
+
+    .card {
+        padding: 20px 15px;
+
+        border-radius: 14px;
+    }
+
+
+    .cabecalho {
+        margin-bottom: 25px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 27px;
+    }
+
+
+    .cabecalho p {
+        font-size: 14px;
+    }
+
+
+    .campo-consulta {
+        flex-direction: column;
+    }
+
+
+    #buscar {
+        width: 100%;
+    }
+
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+
+    #mapa {
+        height: 420px;
+
+        border-radius: 10px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .card {
+        padding: 16px 12px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+
+    #mapa {
+        height: 350px;
+    }
+}

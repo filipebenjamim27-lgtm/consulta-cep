@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Consulta de CEP</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="card">
+
+            <!-- CABEÇALHO -->
+            <header class="cabecalho">
+
+                <div class="icone-localizacao">
+                    📍
+                </div>
+
+                <h1>Consulta de CEP</h1>
+
+                <p>
+                    Consulte um CEP e visualize sua localização
+                    diretamente no mapa.
+                </p>
+
+            </header>
+
+
+            <!-- CONSULTA -->
+            <section class="consulta">
+
+                <label for="cep">
+                    Digite o CEP
+                </label>
+
+                <div class="campo-consulta">
+
+                    <input
+                        type="text"
+                        id="cep"
+                        placeholder="Ex.: 40000-000"
+                        maxlength="9"
+                        autocomplete="postal-code"
+                    >
+
+                    <button
+                        id="buscar"
+                        type="button"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+                <p
+                    id="mensagem"
+                    class="mensagem"
+                    aria-live="polite"
+                ></p>
+
+            </section>
+
+
+            <!-- RESULTADO -->
+            <section
+                id="resultado"
+                class="resultado"
+            >
+
+                <div class="resultado-titulo">
+
+                    <div>
+                        <h2>Endereço encontrado</h2>
+
+                        <p>
+                            Confira os dados encontrados para este CEP.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="dados">
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            CEP
+                        </span>
+
+                        <span id="resultadoCep">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            Logradouro
+                        </span>
+
+                        <span id="logradouro">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            Bairro
+                        </span>
+
+                        <span id="bairro">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            Cidade
+                        </span>
+
+                        <span id="cidade">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            Estado
+                        </span>
+
+                        <span id="estado">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="dado">
+
+                        <span class="rotulo">
+                            Coordenadas
+                        </span>
+
+                        <span id="coordenadas">
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MAPA -->
+            <section class="mapa-container">
+
+                <div class="mapa-cabecalho">
+
+                    <div>
+
+                        <h2>Localização no mapa</h2>
+
+                        <p>
+                            Você pode arrastar e aproximar o mapa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="mapa"></div>
+
+            </section>
+
+
+            <!-- RODAPÉ -->
+            <footer>
+
+                <p>
+                    Dados de endereço:
+                    <strong>ViaCEP</strong>
+                </p>
+
+                <p>
+                    Geolocalização:
+                    <strong>Geoapify</strong>
+                </p>
+
+                <p>
+                    Mapa:
+                    <strong>OpenStreetMap</strong>
+                </p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+    <!-- Leaflet JS -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+    ></script>
+
+
+    <!-- Nosso JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

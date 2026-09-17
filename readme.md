@@ -1,57 +1,42 @@
-O Consulta CEP é uma aplicação de terminal (CLI) desenvolvida em Python que permite ao usuário informar um CEP e consultar os dados de endereço utilizando a API pública ViaCEP.
+# Consulta CEP
 
-A aplicação recebe um CEP, realiza uma requisição para a API e apresenta informações como:
+Aplicação para consulta de endereços através do CEP, com visualização da localização em um mapa interativo.
 
-Logradouro
+O projeto utiliza a API ViaCEP para obter os dados do endereço e a API Geoapify para transformar o endereço em coordenadas geográficas. A localização é exibida utilizando um mapa interativo criado com Leaflet e OpenStreetMap.
 
-Bairro
+# Acesse o projeto
 
-Cidade
+O projeto pode ser executado localmente através do VS Code ou publicado utilizando o GitHub Pages.
 
-Estado
+> Link do GitHub Pages:  
+> https://filipebenjamim27-lgtm.github.io/consulta-cep/
 
-CEP
+# Funcionalidades
 
-2. Objetivo
-O objetivo deste projeto é desenvolver uma aplicação simples utilizando uma API externa e aplicar um processo de desenvolvimento iterativo com auxílio de ferramentas de Inteligência Artificial.
+- Consulta de endereço através do CEP
+- Localização do endereço no mapa
+- Mapa interativo
+- Zoom livre no mapa
+- Navegação pelo mapa
+- Marcador indicando a localização encontrada
+- Interface responsiva para computadores e celulares
+- Mensagens de erro para CEP inválido ou não encontrado
 
-Durante o desenvolvimento serão realizadas quatro iterações:
+# Tecnologias utilizadas
 
-Setup e definição do MVP;
+# Backend / Consulta de CEP
 
-Desenvolvimento inicial utilizando Vibe Coding;
+- Python
+- ViaCEP
 
-Refatoração utilizando princípios de Engenharia de Software;
+# Frontend
 
-Documentação, testes e entrega.
+- HTML5
+- CSS3
+- JavaScript
 
-3. MVP
-O MVP (Minimum Viable Product) consiste em uma aplicação de terminal capaz de:
+# Mapas e localização
 
-Solicitar um CEP ao usuário;
-
-Consultar a API ViaCEP;
-
-Receber os dados do endereço;
-
-Exibir as informações no terminal.
-
-4. API utilizada
-A aplicação utiliza a API pública ViaCEP.
-
-Endpoint utilizado:
-
-https://viacep.com.br/ws/{CEP}/json/
-
-5. Tecnologias
-Python 3
-
-Requests
-
-ViaCEP
-
-Git
-
-GitHub
-
-ChatGPT/Cursor como ferramenta de apoio ao desenvolvimento
+- Leaflet
+- OpenStreetMap
+- Geoapify
